@@ -92,10 +92,13 @@ main {
     justify-content: space-between;
 
 }
+.title h2{
+    color: rgb(253, 68, 99);
+}
 .portfolio{
     display: flex;
    flex-direction: column;
-   gap: 5%;
+   gap: .5%;
     padding: 5% 7%;
 }
 .portfolio h2 {
@@ -125,17 +128,16 @@ main {
     -o-border-radius: 50%;
 }
 .bio span{
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
     font-weight: 700;
-    font-style: normal;
-    color: rgb(253, 68, 99);
+  
+   
 
 }
 .bio b{
     font-family: "Lato", sans-serif;
     font-weight: 500;
     font-style: normal;
+    color: #003366;
 }
 .twirls a{
     color: rgb(253, 68, 99);
@@ -150,7 +152,7 @@ main {
     justify-content: center;
 }
 .twirls-card-body{
-    background-color: black;
+    background-color: #08223d;
     padding: 8%;
     width: 100%;
     border-radius: 2px;
@@ -170,6 +172,7 @@ main {
     font-style: italic;
     color: white;
     font-size: 29px;
+    text-align: center;
 
     
 }
@@ -194,33 +197,124 @@ main {
     font-weight: 600;
     margin-bottom: 7% ;
 }
-.row{
+.row {
     display: flex;
    
 }
+.row  figure{
+    margin:1% 0;
+
+}
 .projects figure{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 240px!important;
-    min-width: 240px!important;
+    padding: 2px;
   
   }
 
 
 
-.projectimg .overlay {
+.projectimg {
+    position: relative;
+    display: inline-block;
+  width: 100%; 
+  height: 300px;
+  margin: 0; 
+}
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Darkish overlay color */
-    transition: opacity 0.3s ease; /* Smooth transition effect */
-    opacity: 1; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+  }
+  
+  .overlay-content {
+    color: white;
+    font-size: 24px; 
+    text-align: center; 
+    padding: 3%;
   }
   
   .projectimg:hover .overlay {
-    opacity: 1; /* Show the overlay on hover */
+    opacity: 1; 
+  }
+  /* Blog Post Section*/
+  .intro{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5% 7%;
+  }
+.category a {
+    text-transform: uppercase;
+    color: #FF6600;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Hero text styling */
+  .hero-text {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #003366;
+  }
+  
+  /* Date of publishing styling */
+  .publish-date {
+    font-size: 14px;
+    color: #888888;
+    margin-bottom: 15px;
+  }
+  
+  /* Blog image styling */
+  .blog-image {
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    /* position: relative;
+    display: inline-block;
+  width: 100%; 
+  height: 300px;
+  margin: 0; */
+  }
+  .blog-image img {
+    width: 100%;
+    height: 400px;
+  
+  }
+  
+  /* Blog content styling */
+  .blog-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  /* Continue reading link styling */
+  .continue-reading a {
+    color: #003366;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    opacity: 1; 
+    transition: opacity 0.3s ease; 
   }
