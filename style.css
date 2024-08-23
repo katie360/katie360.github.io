@@ -2,14 +2,26 @@
 *{
     margin: 0;
 }
-body{
+/* body{
     font-family: Arial, sans-serif;
     height: 100%;
+} */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+body{
+  min-height: 100vh;
 }
 /* FIRST HEADER */
 .header{
     height:200px;
-   
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
 }
 
 .top-header{
@@ -20,17 +32,21 @@ body{
     align-items: center;
     
 }
+
 .socials a{
     color: white;
     font-size: 16px;
     text-decoration: 0;
    
 }
+.socials a:hover{
+  color: rgb(253, 68, 99)!important;
+}
 .socials{
     display: flex;
     justify-content: flex-end;  
     align-items: center;
-    gap: 12px;
+    gap: 25px;
     width: 40%;
     padding-right: 2%;
 }
@@ -39,8 +55,10 @@ body{
     background-color: white;
     height: 40%;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2%;
 }
 
 .search-container {
@@ -51,9 +69,9 @@ body{
 }
 
 .search-input {
-    width:95%;
+    width:100%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 10px;
     font-size: 12px;
     outline: none;
@@ -61,13 +79,18 @@ body{
 }
 
 .search-input:focus {
-    border-color: #007BFF;
+    border-color:rgb(253, 68, 99);
 }
 
 /* MAIN HEADER */
 .main-header{
     background-color: rgb(253, 231, 235);
     height: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
 }
 .nav-item{
     text-transform: uppercase;
@@ -81,9 +104,11 @@ li .active{
     height: 55px;
 }
 main {
+     padding-top: 110px;
     display: grid;
-    grid-template-columns: 3fr 2fr; /* 3 parts for the main content, 1 part for the sidebar */
-    height: 100vh; /* Make the section height span the full viewport height */
+    grid-template-columns: 3fr 2fr; 
+    grid-template-rows: 1fr auto;
+    height: 100vh; 
 }
 
 .title{
@@ -141,7 +166,8 @@ main {
 }
 .twirls a{
     color: rgb(253, 68, 99);
-    font-family: "Dancing Script", cursive;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;  
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -165,6 +191,7 @@ main {
     gap: 1%;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
 }
 .twirls-card-body span{
     font-family: "Lato", sans-serif;
@@ -191,6 +218,7 @@ main {
     margin: 5% 0;
     border-radius: 2px;
     text-align: center;
+    border-radius: 4px;
 }
 .projects h3{
     font-family: "Lato", sans-serif;
@@ -206,9 +234,13 @@ main {
 
 }
 .projects figure{
-    padding: 2px;
-  
-  }
+  padding: 2px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
 
 
 
@@ -318,3 +350,27 @@ main {
     opacity: 1; 
     transition: opacity 0.3s ease; 
   }
+  .footer{
+    grid-column: 1 / span 2;
+    position: relative;
+    /* margin-bottom: 0; */
+    width: 100%!important;
+    background-color: rgba(128, 128, 128, 0.16);
+    height: 100px;
+    margin-top: 20px; 
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2%;
+   
+  }
+  .footer p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+  }
+  .logo img{
+    width: 130px;
+  }
+ 
